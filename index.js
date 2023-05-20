@@ -17,4 +17,4 @@ app.use(express.static(path.join(__dirname,'../frontend/build')))
 app.get('*',(req,res)=>{
 res.sendFile(path.join(__dirname,'../frontend/build/index.html'))
 })
-app.listen(8080,()=>console.log('running on 8080'))
+app.listen(process.env.PORT,()=>console.log('running on 8080'))
